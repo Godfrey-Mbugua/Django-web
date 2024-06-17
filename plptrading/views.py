@@ -30,8 +30,8 @@ def customer_list(request):
     }
     return render(request,'plptrading/customer_list.html',context)
 
-def customer_detail(request,id):
-    customer = get_object_or_404(Customer,id=id)
+def customer_detail(request,pk):
+    customer = get_object_or_404(Customer,pk=pk)
     context ={
         'customer': customer
     }
