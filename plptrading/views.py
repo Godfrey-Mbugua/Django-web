@@ -5,7 +5,7 @@ from .models import Customer
 
 # Create your views here.
 def home(request):
-    return render(request,'plptrading/home.html')
+    return render(request,'plptrading/home_page.html')
 
 def product_list(request):
     products=Product.objects.all()
