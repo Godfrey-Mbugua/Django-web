@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 </head>
 <body>
-  
-      <h2>{{ product.name }}</h2>
-      <p>{{ product.description }}</p>
-      <p>Price: Kshs {{ product.price }}</p>
-      <img src="{{ product.image.url }}" alt="{{ product.name }}">
-      <p>Availability: {{ product.availability|yesno:"Yes,No" }}</p>
-  
+  <h1>{{ product.name }}</h1>
+  <div class="product_detail">
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.description }}</p>
+    <p>Price: {{ product.price }}</p>
+    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+    <p>Availability: {{ product.availability|yesno:"Yes,No" }}</p>
+  </div>
   <a href="{% url 'plptrading:product_list' %}" class="back-link">Back to product list</a>
 </body>
 </html>
