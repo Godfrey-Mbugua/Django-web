@@ -1,9 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>{{ product.name }}</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{% static 'plptrading/style.css' %}">
 </head>
 <body>
   <h1>{{ product.name }}</h1>
@@ -11,9 +13,11 @@
     <h2>{{ product.name }}</h2>
     <p>{{ product.description }}</p>
     <p>Price: {{ product.price }}</p>
-    <img src="{{ product.image.url }}" alt="{{ product.name }}">
     <p>Availability: {{ product.availability|yesno:"Yes,No" }}</p>
+    <img src="{{ media.images.url }}" alt="{{ product.name }}">
   </div>
   <a href="{% url 'plptrading:product_list' %}" class="back-link">Back to product list</a>
 </body>
 </html>
+
+

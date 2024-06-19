@@ -117,12 +117,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 
+# https://docs.djangoproject.com/en/5.0/howto/static-files/
+STATICFILES_DIRS = [
+    BASE_DIR / "plptrading/static", ] # Adjust the path as per your directory structure
     
 #Media files(uploaded files)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# https://docs.djangoproject.com/en/5.0/howto/static-files/
+
 
 
 
